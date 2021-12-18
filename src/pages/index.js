@@ -81,7 +81,7 @@ export default function Home() {
           </div>
           <div className="col-span-7 lg:py-20 px-12 flex justify-center items-center">
             <div className="grid gap-5">
-              <Image src="avi.jpg" className="h-80 w-80 rounded-full"/>
+              <img src="avi.jpg" className="h-80 w-80 rounded-full"/>
               <div className="text-gray-200 text-sm text-center">
                 Oh and yes I do Improv and Stand-up Comedy too
               </div>
