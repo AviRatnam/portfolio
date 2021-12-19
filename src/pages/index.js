@@ -1,4 +1,3 @@
-import Header from "../Components/Header/Header";
 import Github from "../logos/github";
 import Linkedin from "../logos/linkedin";
 import Medium from "../logos/medium";
@@ -7,6 +6,7 @@ import {
   Code,
   Computer,
   GithubIcon,
+  Hamburger,
   Hat,
   Mail,
   Paper,
@@ -23,14 +23,19 @@ import {
   React,
   Tailwindcss,
 } from "../logos/techlogos";
-import IntroWidget from "../Widgets/IntroWidget";
-import Image from "next/image";
 
 export default function Home() {
+
   return (
-    <div>
-      <div className="bg-headerGray absolute w-full h-10 px-20 flex justify-center items-center ">
-        <div className="flex gap-10">
+    <>
+      <div className="bg-headerGray w-screen h-10 flex justify-center items-center fixed ">
+        <div className="lg:flex justify-end " id="burger">
+          <Hamburger />
+        </div>
+        <div
+          className="lg:flex hidden grid grid-cols-3 lg:gap-10 gap-2"
+          id="menu"
+        >
           <a
             className="text-gray-300 text-sm hover:text-gray-100"
             href="#aboutme"
@@ -41,21 +46,34 @@ export default function Home() {
           <a className="text-gray-300 text-sm hover:text-gray-100" href="#tech">
             Tech I Use
           </a>
-          <a className="text-gray-300 text-sm hover:text-gray-100" href="#papers">
+          <a
+            className="text-gray-300 text-sm hover:text-gray-100"
+            href="#papers"
+          >
             Paper Publications
           </a>
           <a className="text-gray-300 text-sm hover:text-gray-100" href="#work">
             Work Experience
           </a>
-          <a className="text-gray-300 text-sm hover:text-gray-100" href="#projects">Projects</a>
+          <a
+            className="text-gray-300 text-sm hover:text-gray-100"
+            href="#projects"
+          >
+            Projects
+          </a>
 
-          <a className="text-gray-300 text-sm hover:text-gray-100" href="#contact">Contact</a>
+          <a
+            className="text-gray-300 text-sm hover:text-gray-100"
+            href="#contact"
+          >
+            Contact
+          </a>
         </div>
       </div>
 
       <div className="w-full h-screen flex justify-center items-center">
         <div className="grid gap-5">
-          <div className="text-center text-3xl font-sansPro font-semibold">
+          <div className="text-center text-3xl font-sansPro font-semibold pt-10 lg:pt-0">
             Avinash Ratnam
           </div>
           <div className="text-center text-5xl font-sansPro font-semibold pt-5">
@@ -91,12 +109,12 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full h-3/4 bg-darkBlueGray" id="aboutme">
-        <div className="text-white text-4xl text-center font-sansPro font-semibold py-10">
-          Who am I?
+        <div className="text-white text-3xl lg:text-5xl text-center font-sansPro font-semibold pt-20 ">
+          About Me
         </div>
-        <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-5 lg:py-20 px-12 flex justify-center items-center">
-            <div className="font-semibold text-white text-xl grid gap-3">
+        <div className="grid lg:grid-cols-12 gap-5">
+          <div className="col-span-5 lg:py-18 lg:px-12 px-5 flex justify-center items-center">
+            <div className="font-normal text-white text-md lg:text-xl grid gap-3">
               <p>
                 I am a final-year engineering student from PES University,
                 Bangalore India.
@@ -110,9 +128,12 @@ export default function Home() {
               All my work has been showcased below.
             </div>
           </div>
-          <div className="col-span-7 lg:py-20 px-12 flex justify-center items-center">
+          <div className="col-span-7 lg:py-20 lg:px-12 flex justify-center items-center">
             <div className="grid gap-5">
-              <img src="avi.jpg" className="h-80 w-80 rounded-full" />
+              <img
+                src="avi.jpg"
+                className="lg:h-80 lg:w-80 h-25 w-25 rounded-full"
+              />
               <div className="text-gray-200 text-sm text-center">
                 Oh and yes I do Improv and Stand-up Comedy too
               </div>
@@ -120,12 +141,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full h-3/4 flex justify-center items-center " id="tech">
+      <div
+        className="w-full h-3/4 flex justify-center items-center pt-28"
+        id="tech"
+      >
         <div className="grid gap-5">
-          <div className="text-center pt-28 pb-14 font-sansPro text-4xl font-semibold">
-            Tech I use
+          <div className="text-center pb-14 font-sansPro text-3xl lg:text-5xl font-semibold">
+            Technology I use
           </div>
-          <div className="flex gap-28">
+          <div className="flex lg:gap-32 gap-16 overflow-auto ">
             <Html />
             <Css />
             <Js />
@@ -137,12 +161,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full h-full ">
-        <div className="pt-40 pb-16 font-semibold font-sansPro text-4xl text-center" id="papers">
-          What papers have I published ?
+      <div className="w-full h-full mt-40 pb-16 bg-gray-100 ">
+        <div
+          className=" pb-16 pt-20 font-semibold font-sansPro text-3xl lg:text-5xl text-center "
+          id="papers"
+        >
+          Paper Publications
         </div>
-        <div className="flex justify-center gap-20">
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+        <div className="lg:flex grid justify-center gap-20">
+          <div className="w-80 bg-white h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-xl">
             <div className="text-xl font-semibold font-sansPro text-center">
               Capstone Project
             </div>
@@ -179,7 +206,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+          <div className="w-80 bg-white h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-xl">
             <div className="text-xl font-semibold font-sansPro text-center">
               Equation Solver
             </div>
@@ -224,11 +251,14 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full h-full">
-        <div className="pt-36 pb-16 font-semibold font-sansPro text-4xl text-center" id="work">
-          Where have I worked?
+        <div
+          className="pt-36 pb-16 font-semibold font-sansPro text-3xl lg:text-5xl text-center"
+          id="work"
+        >
+          Work Experience
         </div>
-        <div className="grid grid-cols-2 gap-5 mt-5 px-20">
-          <div className="bg-white rounded-lg border border-gray-200 px-10 py-6">
+        <div className="grid lg:grid-cols-2 gap-5 mt-5 px-10 lg:px-20">
+          <div className="bg-white rounded-lg border border-gray-200 hover:border-gray-400 px-10 py-6">
             <div className="font-sansPro text-2xl font-semibold">
               Thinkify Labs
             </div>
@@ -252,7 +282,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg border border-gray-200 px-10 py-6">
+          <div className="bg-white rounded-lg border border-gray-200 hover:border-gray-400 px-10 py-6">
             <div className="font-sansPro text-2xl font-semibold">
               Dgraph Labs
             </div>
@@ -277,7 +307,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg border border-gray-200 px-10 py-6">
+          <div className="bg-white rounded-lg border border-gray-200 hover:border-gray-400 px-10 py-6">
             <div className="font-sansPro text-2xl font-semibold">
               ThoughtSpot Inc
             </div>
@@ -299,16 +329,19 @@ export default function Home() {
           </div>
 
           <div className="bg-white rounded-lg border-2 border-dashed border-gray-200 px-10 py-6 flex justify-center items-center">
-            <div className="text-gray-400 italic">Coming soon...</div>
+            <div className="text-gray-400 italic">Your company ???</div>
           </div>
         </div>
       </div>
       <div className="w-full h-full ">
-        <div className="pt-36 pb-16 font-semibold font-sansPro text-4xl text-center" id="projects">
-          What projects have I done ?
+        <div
+          className="pt-36 pb-16 font-semibold font-sansPro text-3xl lg:text-5xl text-center"
+          id="projects"
+        >
+          Project Showcase
         </div>
-        <div className="flex justify-center gap-20">
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+        <div className="lg:flex grid justify-center gap-5 lg:gap-20">
+          <div className="w-80 h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-lg">
             <div className="text-xl font-semibold font-sansPro text-center">
               Capstone Project
             </div>
@@ -344,7 +377,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+          <div className="w-80 h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-lg">
             <div className="text-xl font-semibold font-sansPro text-center">
               Elderaan App
             </div>
@@ -378,7 +411,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+          <div className="w-80 h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-lg">
             <div className="text-xl font-semibold font-sansPro text-center">
               Stock Simulation
             </div>
@@ -412,7 +445,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-80 h-auto border border-gray-200 items-center px-10 py-6 rounded-lg">
+          <div className="w-80 h-auto border border-gray-200 hover:border-gray-400 items-center px-10 py-6 rounded-lg">
             <div className="text-xl font-semibold font-sansPro text-center">
               Data Visualisation
             </div>
@@ -464,7 +497,7 @@ export default function Home() {
         id="contact"
       >
         <div className="grid gap-5">
-          <div className="text-center pt-28 pb-10 font-sansPro text-4xl font-semibold">
+          <div className="text-center pt-28 pb-10 font-sansPro lg:text-5xl text-3xl font-semibold">
             Contact
           </div>
           <div className="grid gap-10">
@@ -487,6 +520,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
