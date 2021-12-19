@@ -73,7 +73,7 @@ export default function Home() {
 
       <div className="w-full h-screen flex justify-center items-center">
         <div className="grid gap-5">
-          <div className="text-center text-3xl font-sansPro font-semibold pt-10 lg:pt-0">
+          <div className="text-center text-3xl font-sansPro font-semibold pt-20 lg:pt-0">
             Avinash Ratnam
           </div>
           <div className="text-center text-5xl font-sansPro font-semibold pt-5">
@@ -101,20 +101,20 @@ export default function Home() {
               About me
             </a>
           </div>
-          <div className="mt-32 flex md:gap-24 gap-10 justify-center">
+          <div className="lg:mt-32 mt-20 mb-10 lg:mb-0 flex md:gap-24 gap-10 justify-center">
             <Linkedin height={23} width={30} />
             <Medium height={26} width={26} />
             <Github width={30} height={24} />
           </div>
         </div>
       </div>
-      <div className="w-full h-3/4 bg-darkBlueGray" id="aboutme">
-        <div className="text-white text-3xl lg:text-5xl text-center font-sansPro font-semibold pt-20 ">
+      <div className="w-full h-3/4 bg-darkBlueGray py-20" id="aboutme">
+        <div className="text-white text-3xl lg:text-5xl text-center font-sansPro font-semibold">
           About Me
         </div>
         <div className="grid lg:grid-cols-12 gap-5">
           <div className="col-span-5 lg:py-18 lg:px-12 px-5 flex justify-center items-center">
-            <div className="font-normal text-white text-md lg:text-xl grid gap-3">
+            <div className="font-normal text-white text-md pt-10 lg:pt-0 lg:text-xl grid gap-3">
               <p>
                 I am a final-year engineering student from PES University,
                 Bangalore India.
@@ -128,11 +128,11 @@ export default function Home() {
               All my work has been showcased below.
             </div>
           </div>
-          <div className="col-span-7 lg:py-20 lg:px-12 flex justify-center items-center">
+          <div className="col-span-7 lg:pt-20 lg:px-12 flex justify-center items-center">
             <div className="grid gap-5">
               <img
                 src="avi.jpg"
-                className="lg:h-80 lg:w-80 h-25 w-25 rounded-full"
+                className="lg:h-80 lg:w-80 lg:p-0 p-10 rounded-full"
               />
               <div className="text-gray-200 text-sm text-center">
                 Oh and yes I do Improv and Stand-up Comedy too
@@ -149,7 +149,7 @@ export default function Home() {
           <div className="text-center pb-14 font-sansPro text-3xl lg:text-5xl font-semibold">
             Technology I use
           </div>
-          <div className="flex lg:gap-32 gap-16 overflow-auto ">
+          <div className="lg:flex grid grid-cols-2 lg:gap-32 gap-16 px-5 lg:px-0 overflow-auto ">
             <Html />
             <Css />
             <Js />
