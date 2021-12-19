@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Header = () => {
   return (
     <div className="bg-headerGray absolute w-full h-10 px-20 flex justify-center items-center ">
@@ -12,6 +10,9 @@ const Header = () => {
 
         <a className="text-gray-300 text-sm hover:text-gray-100">
           Projects and Publications
+        </a>
+        <a className="text-gray-300 text-sm hover:text-gray-100">
+          Work Experience
         </a>
         <a className="text-gray-300 text-sm hover:text-gray-100">Contact</a>
       </div>
